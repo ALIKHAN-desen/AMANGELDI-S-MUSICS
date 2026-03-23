@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ALIKHANS.MUSICS</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ФОН -->
+<div class="bg-icons">
+  <span class="up">🎵</span>
+  <span class="down">🎧</span>
+  <span class="left">🎶</span>
+  <span class="right">🎤</span>
+  <span class="diag1">🎹</span>
+  <span class="diag2">🎸</span>
+</div>
+
+<!-- КНОПКА ВХОД -->
+<button id="loginBtn">Войти</button>
+
+<div class="container">
+
+  <!-- САЙДБАР -->
+  <aside class="sidebar">
+    <h2>🎧 Артисты</h2>
+    <div onclick="filterArtist('nurislam')" class="artist">Нурислам</div>
+    <div onclick="filterArtist('ishak')" class="artist">Исхак</div>
+    <div onclick="filterArtist('bekzod')" class="artist">Бекзод</div>
+    <div onclick="filterArtist('amangeldi')" class="artist">Амангелди</div>
+    <div onclick="filterArtist('ariet')" class="artist">Ариет</div>
+    <div onclick="filterArtist('belek')" class="artist">Белек</div>
+
+    <h2>❤️ Мои треки</h2>
+    <div id="favorites"><p>Пусто</p></div>
+  </aside>
+
+  <!-- ОСНОВА -->
+  <main>
+
+    <h1 class="title">Welcome to ALIKHANS.MUSICS 🎶</h1>
+
+    <input type="text" id="search" placeholder="Поиск треков...">
+
+    <!-- РАЗДЕЛЫ -->
+
+    <section class="category"><h2>🎧 По настроению</h2>
+      <div class="song" data-artist="nurislam"><h3>Chill Vibe</h3><audio><source src="musics/Po KG.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track1.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="ariet"><h3>Late Night</h3><audio><source src="musics/Texas.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track2.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>💪 Тренировка</h2>
+      <div class="song" data-artist="bekzod"><h3>Power Beat</h3><audio><source src="musics/Aim%20Cargo%20(2026).m4a."></audio><div class="actions"><button class="like">♡</button><a href="music/track3.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="ishak"><h3>Hard Energy</h3><audio><source src="musics/KZ.m4amp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track4.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>🚗 В дорогу</h2>
+      <div class="song" data-artist="nurislam"><h3>Road Trip</h3><audio><source src="musics/НЕ%20КЕРЕК.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track5.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="ariet"><h3>Drive Night</h3><audio><source src="musics/Dr.%20Shum%20-%20Bounce.wav"></audio><div class="actions"><button class="like">♡</button><a href="music/track6.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>📚 Для учебы</h2>
+      <div class="song" data-artist="bekzod"><h3>Focus Beat</h3><audio><source src="musics/BH.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track7.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="ishak"><h3>Deep Work</h3><audio><source src="musics/track8.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track8.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>🌙 Спокойная</h2>
+      <div class="song" data-artist="belek"><h3>Soft Night</h3><audio><source src="musics/track9.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track9.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="amangeldi"><h3>Relax Mood</h3><audio><source src="musics/track10.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track10.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>🎉 Вечеринка</h2>
+      <div class="song" data-artist="ariet"><h3>Party Time</h3><audio><source src="music/track11.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track11.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="nurislam"><h3>Dance Floor</h3><audio><source src="music/track12.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track12.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+    <section class="category"><h2>💔 Грусть</h2>
+      <div class="song" data-artist="ishak"><h3>Sad Mood</h3><audio><source src="music/track13.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track13.mp3" download class="download">⬇</a></div></div>
+      <div class="song" data-artist="bekzod"><h3>Lonely Night</h3><audio><source src="music/track14.mp3"></audio><div class="actions"><button class="like">♡</button><a href="music/track14.mp3" download class="download">⬇</a></div></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ПЛЕЕР -->
+<div class="player">
+  <button id="prev">⏮</button>
+  <div id="nowPlaying">Ничего не играет</div>
+  <button id="next">⏭</button>
+  <audio id="mainPlayer" controls></audio>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
